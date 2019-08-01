@@ -39,23 +39,23 @@ class Bender(var status: Status = Status.NORMAL, var question:Question = Questio
         }
     }
     enum class Question(val question:String, val answers:List<String>){
-        NAME("Как меня зовут?", listOf("бендер", "bender")){
-            override fun nextQuestion(): Question = PROFESSION
+        NAME("Как меня зовут?", listOf("Бендер", "bender", "Bender")) {
+            override fun nextQuestion():Question = PROFESSION
         },
-        PROFESSION("Назови мою профессию?", listOf("сгибальщик","bender")){
-            override fun nextQuestion(): Question = MATERIAL
+        PROFESSION("Назови мою профессию?", listOf("сгибальщик", "bender")){
+            override fun nextQuestion():Question = MATERIAL
         },
-        MATERIAL("Из чего я сделан?", listOf("металл","дерево", "metal", "iron", "wood")){
-            override fun nextQuestion(): Question = BDAY
+        MATERIAL("Из чего я сделан?", listOf("металл", "дерево", "metal", "iron", "wood")){
+            override fun nextQuestion():Question = BDAY
         },
         BDAY("Когда меня создали?", listOf("2993")){
-            override fun nextQuestion(): Question =SERIAL
+            override fun nextQuestion():Question = SERIAL
         },
         SERIAL("Мой серийный номер?", listOf("2716057")){
-            override fun nextQuestion(): Question = IDLE
+            override fun nextQuestion():Question = IDLE
         },
         IDLE("На этом все, вопросов больше нет", listOf()){
-            override fun nextQuestion(): Question = IDLE
+            override fun nextQuestion():Question = IDLE
         };
 
         abstract fun nextQuestion():Question
