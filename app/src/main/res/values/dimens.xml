@@ -13,5 +13,8 @@
     <dimen name ="spacing_small_8">24dp</dimen>
     <dimen name ="spacing_tiny_4">4dp</dimen>
 
+    <dimen name ="image_button_size_24">24dp</dimen>
+
+
 
 </resources>
