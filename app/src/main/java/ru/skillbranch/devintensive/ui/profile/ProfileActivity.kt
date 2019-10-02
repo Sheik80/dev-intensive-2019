@@ -48,10 +48,8 @@ class ProfileActivity : AppCompatActivity() {
 
     private fun initViewModel() {
         viewModel = ViewModelProviders.of(this).get(ProfileViewModel::class.java)
-        viewModel.getProfileData().observe(this, Observer { updateUi(it) })
+        viewModel.getProfileData().observe(this, Observer { updateUI(it) })
         viewModel.getTheme().observe(this, Observer { updateTheme(it) })
-
-
     }
 
     private fun updateTheme(mode: Int) {
@@ -61,7 +59,7 @@ class ProfileActivity : AppCompatActivity() {
 
     }
 
-    private fun updateUi(profile: Profile) {
+    private fun updateUI(profile: Profile) {
 
         profile.toMap().also {
             for ((k, v) in viewFields) {
