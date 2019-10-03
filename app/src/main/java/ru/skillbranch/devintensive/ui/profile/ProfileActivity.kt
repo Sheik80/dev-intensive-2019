@@ -77,7 +77,7 @@ class ProfileActivity : AppCompatActivity() {
             "firstName" to et_first_name,
             "lastName" to et_last_name,
             "about" to et_about,
-            "repository" to wr_repository,
+            "repository" to et_repository,
             "rating" to tv_rating,
             "respect" to tv_respect
         )
@@ -142,7 +142,7 @@ class ProfileActivity : AppCompatActivity() {
             firstName = et_first_name.text.toString(),
             lastName = et_last_name.text.toString(),
             about = et_about.text.toString(),
-            repository = wr_repository.text.toString()
+            repository = et_repository.text.toString()
         ).apply{
             viewModel.saveProfileData(this)
 
